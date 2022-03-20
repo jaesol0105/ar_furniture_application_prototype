@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ARFurnitureApplication</string>
+    <string name="ar">AR 시뮬레이션</string>
+    <string name="cnn">가구 추천</string>
+</resources>
