@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+/unityLibrary/build
+/unityLibrary/libs
+/unityLibrary/src
+/unityLibrary/symbols

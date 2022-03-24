@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.unity3d.player.UnityPlayerActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var ARButton: Button
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         ImageClassifierButton.setOnClickListener { view ->
             val intent = Intent(this,ImageClassifierActivity::class.java)
+            startActivity(intent)
+        }
+        ARButton.setOnClickListener { view ->
+            val intent = Intent(this, UnityPlayerActivity::class.java)
             startActivity(intent)
         }
     }

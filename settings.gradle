@@ -1,10 +1,11 @@
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
-    }
-}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        jcenter() // Warning: this repository is going to shut down soon
+//    }
+//}
+include ':app', ':unityLibrary'
 rootProject.name = "ARFurnitureApplication"
-include ':app'
+project(':unityLibrary').projectDir = new File('C:\\Users\\musou\\AndroidStudioProjects\\ARFurnitureApplication\\unityLibrary')
