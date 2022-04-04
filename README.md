@@ -63,7 +63,7 @@
 
 추가적으로 발생한 에러들은 아래와 같다.
 
-- 빌드 에러 (해결)
+- <b>빌드 에러</b>
 
 ```
 execution failed for task ':unitylibrary:buildil2cpptask'. > ndk is not installed.
@@ -75,7 +75,7 @@ execution failed for task ':unitylibrary:buildil2cpptask'. > ndk is not installe
 
 <br>
 
-- 어플 실행후 AR foundation기능을 실행하면 unity로고가 2초간 보이고, 유니티 프로젝트가 실행되는 순간 앱이 종료되는 문제 (해결)
+- <b>어플 실행후 AR foundation기능을 실행하면 unity로고가 2초간 보이고, 유니티 프로젝트가 실행되는 순간 앱이 종료되는 문제</b>
 
 ```
 E/DynamiteClient(19046): java.lang.UnsatisfiedLinkError: dlopen failed: "/data/app/~~u_1pv7mhEcdnnbSpbvHKgQ==/com.google.ar.core-ln9aByaqxbuIVWB73BtlpA==/base.apk!/lib/arm64-v8a/libarcore_c.so" [URL='http://www.google.com/search?q=is+msdn.microsoft.com']is[/URL] 64-bit instead of 32-bit
@@ -95,6 +95,16 @@ sdk를 30(android 11)로 다운 하였으나 해결되지 않음.
     2-2) Android Studio - gradle<br>
     <b><a href="https://blog.naver.com/PostView.nhn?blogId=jogilsang&logNo=221605475532&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView">apk 파일 64bit 설정</a></b><br>
     ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64' 를 gradle에 추가한다
+
+<br>
+
+- <b>유니티 AR 화면에서 뒤로가기 버튼누를시 앱이 종료되는문제</b>
+
+1) manifest의 유니티 Activity에 다음을 추가 (해결)
+
+```
+android:process=":unityplayer"
+```
 
 
 ### 그 외 참고
